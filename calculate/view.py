@@ -49,3 +49,11 @@ class View:
             print(f"RESULTAT : {operation} = {result}")
         else:
             print(f"Votre operation est incorrect ! : {operation}")
+
+
+# --- Fonctions compatibles avec les tests Pytest existants ---
+def display_result(operation, result):
+    return View.print_result(operation, result)
+
+def get_input(input_msg="Entrez une valeur"):
+    return View.get_user_input(input_msg)
